@@ -3,11 +3,23 @@ import DonutLargeIcon from '@material-ui/icons/DonutLarge';
 import ChatIcon from '@material-ui/icons/Chat';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import SearchIcon from '@material-ui/icons/Search';
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './Sidebar.css'
 import SidebarChat from './SidebarChat';
+// import db from './firebase';
 
 function Sidebar() {
+    const [rooms,setRooms]=useState([]);
+    // useEffect(()=>{
+    //     db.collection('Rooms').onSnapshot(snapshot=>{
+    //         setRooms(snapshot.docs.map(
+    //             doc=>({
+    //                 id:doc.id,
+    //                 data:doc.data()
+    //             })
+    //         ))
+    //     })
+    // },[])
     return (
         <div className="sidebar">
             <div className="sidebar__header">
